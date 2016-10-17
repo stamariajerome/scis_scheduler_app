@@ -1,1 +1,54 @@
-h1 new
+= render 'blocks/navbar'
+#page-wrapper 
+  .row
+    .col-lg-12
+      h1.page-header Add Blocks
+      ol.breadcrumb
+        li
+          = link_to 'Blocks', blocks_path
+        li
+          = link_to 'New Block', new_block_path
+
+    .col-lg-12
+        .panel.panel-default
+          .panel-heading style="overflow: auto;"
+            = fa_icon 'bar-chart-o', text: 'Add Block', style: "padding-top: 10px;"
+            
+            .pull-right
+              button.btn.btn-success  data-toggle="modal" data-target="#addSubjectModal" Add Course
+              
+          .panel-body
+            table.table.responsive.no-wrap
+              thead
+                tr
+                  th #
+                  th Date
+                  th Time
+                  th Amount
+                  th Action
+              tbody
+                tr
+                  td 3326
+                  td 10/21/201
+                  td 3:29 PM
+                  td 3:29 PM
+                  td 
+                    .btn-toolbar role="toolbar"
+                      .btn-group
+                        = link_to 'View', nil, class: "label label-default"
+                      .btn-group
+                        = link_to 'Delete', nil, class: "label label-danger"
+                        
+#addSubjectModal.modal.fade role="dialog"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" &times;
+        
+        h4.modal-title Add Course
+        
+      .modal-body
+        p Some text in the modal
+        
+      .modal-footer
+        button.btn.btn-danger type="button" data-dismiss="modal" Close
