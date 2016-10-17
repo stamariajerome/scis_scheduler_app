@@ -6,23 +6,23 @@ default: &default
 development:
   <<: *default
   database: scis_scheduler_app_development
-  username: jerome
-  password: 12345
+  username: your username
+  password: password
   host: localhost
-  port: 5433
+  port: port number
 
 test:
   <<: *default
   database: scis_scheduler_app_test
-  username: jerome
-  password: 12345
+  username: your username
+  password: password
   host: localhost
-  port: 5433
+  port: port number
 
 production:
   <<: *default
   database: scis_scheduler_app_production
-  username: jerome
-  password: 12345
+  username: your username
+  password: password
   host: localhost
-  port: 5433
+  port: port number
